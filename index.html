@@ -14,22 +14,64 @@
     <header>
         <div id="top-bar">
             <img id="logo-img" src="./images/dummy-logo.png" />
+
+            <!-- This Nav for desktop -->
+            <nav class="navbar-desktop">
+                <div class="line"></div>
+                <ul class="nav-list">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Creation</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Contact Us</a></li>
+
+                </ul>
+                <div class="line"></div>
+            </nav>
+
+            <!-- This Nav for Tabs & Mob -->
+            <nav class="navbar-mobile">
+                <img id="menu-toggle" src="./images/nav-button-icon.png" onclick="toggleMenu()" />
+            </nav>
         </div>
 
-        <nav class="navbar">
-            <div class="line"></div>
-            <ul class="nav-list">
-                <li><a href="#">Home</a></li>
+        <div class="nav-list-mob">
+            <ul id="mob-list">
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Creation</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Contact Us</a></li>
-
             </ul>
-            <div class="line"></div>
-        </nav>
+        </div>
     </header>
+
+    <section id="hero">
+        <img class="hero-image" src="./images/slider-1.jpg" />
+    </section>
 </body>
+<script>
+    function toggleMenu() {
+        let mobNavElemDisplay = document.getElementsByClassName('nav-list-mob')[0];
+        if (mobNavElemDisplay.style.display === "flex") mobNavElemDisplay.style.display = "none";
+        else mobNavElemDisplay.style.display = "flex";
+
+    }
+
+    // adding event listner to close toggle in case of menu click
+
+    const ul = document.getElementById('mob-list');
+    const lis = ul.getElementsByTagName('li');
+    for (let i = 0; i < lis.length; i++) {
+        lis[i].addEventListener('click', function () {
+            document.getElementsByClassName('nav-list-mob')[0].style.display = "none";
+        });
+    }
+
+
+
+</script>
 
 </html>

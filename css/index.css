@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
@@ -18,14 +19,19 @@
     font-weight: medium;
     font-style: normal;
 }
+
+/* Desktop HTML */
 body {
-     font-family: 'Roboto', sans-serif;
-     font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    padding-left: 2%;
+    padding-right: 2%;
  }
 #top-bar {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 5px 0px 5px 0px;
 }
 
@@ -34,11 +40,12 @@ body {
     height: 70px;
     padding: 5px 0px 10px 0px;
 }
-.navbar {
+.navbar-desktop {
     padding: 10px 5px 10px 5px;
+    width: 100%;
 }
 
-.nav-list {
+.navbar-desktop .nav-list {
     display: flex;
     list-style: none;
     padding: 5px;
@@ -48,24 +55,121 @@ body {
     justify-content: center;
 }
 
-.nav-list li{
+.navbar-desktop .nav-list li{
     padding: 0px 20px 0px 20px;
 }
 
-.nav-list li:first-child {
+.navbar-desktop .nav-list li:first-child {
     border-left: none;
 }
 
-.nav-list li:last-child {
+.navbar-desktop .nav-list li:last-child {
     border-right: none;
 }
 
-.nav-list li a {
+.navbar-desktop .nav-list li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
 }
 
-.nav-list li a:hover {
+.navbar-desktop .nav-list li a:hover {
     color: #f09a1a;
+}
+
+#hero {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet & Mobile CSS */
+
+.navbar-mobile {
+    display: none;
+}
+
+#menu-toggle {
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+.nav-list-mob {
+    list-style: none;
+    display: none;
+    width: 100%;
+
+}
+
+.nav-list-mob ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-list-mob li a:hover {
+    color: #f09a1a;
+}
+
+.nav-list-mob ul li{
+    padding-top: 10px;
+}
+
+#mob-list {
+    list-style: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        margin: 10px;
+    }
+
+    #top-bar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #logo-img {
+        width: 100px;
+        height: 50px;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .navbar-desktop {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+
+
+    .nav-list-mob {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+   
+    #hero {
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #hero {
+        height: 400px;
+    }
 }
