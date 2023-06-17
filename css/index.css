@@ -293,13 +293,26 @@ footer{
     #hero {
         height: 400px;
     }
+    #top-bar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #menu-toggle {
+        display: block;
+    }
+
+    .navbar-desktop {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
     #images-container {
         height: 200px;
     }
     #images-container img {
         width: 30%;
     }
-    #history {
-        margin-top: -200px;
-    }
+
 }
