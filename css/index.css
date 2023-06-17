@@ -23,10 +23,10 @@
 /* Desktop HTML */
 body {
     font-family: 'Roboto', sans-serif;
-    font-weight: normal;
     padding-left: 2%;
     padding-right: 2%;
- }
+}
+
 #top-bar {
     display: flex;
     justify-content: center;
@@ -40,6 +40,7 @@ body {
     height: 70px;
     padding: 5px 0px 10px 0px;
 }
+
 .navbar-desktop {
     padding: 10px 5px 10px 5px;
     width: 100%;
@@ -55,22 +56,13 @@ body {
     justify-content: center;
 }
 
-.navbar-desktop .nav-list li{
+.navbar-desktop .nav-list li {
     padding: 0px 20px 0px 20px;
-}
-
-.navbar-desktop .nav-list li:first-child {
-    border-left: none;
-}
-
-.navbar-desktop .nav-list li:last-child {
-    border-right: none;
 }
 
 .navbar-desktop .nav-list li a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: #080808;
 }
 
 .navbar-desktop .nav-list li a:hover {
@@ -111,7 +103,7 @@ body {
 
 .nav-list-mob ul li a {
     text-decoration: none;
-    color: #333;
+    color: #080808;
     font-weight: bold;
 }
 
@@ -119,7 +111,7 @@ body {
     color: #f09a1a;
 }
 
-.nav-list-mob ul li{
+.nav-list-mob ul li {
     padding-top: 10px;
 }
 
@@ -128,6 +120,7 @@ body {
 }
 
 
+/* Only mobile media query */
 @media screen and (max-width: 768px) {
 
     body {
@@ -162,12 +155,13 @@ body {
         align-items: center;
         justify-content: space-between;
     }
-   
+
     #hero {
         height: 200px;
     }
 }
 
+/* Only tablet media query */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     #hero {
         height: 400px;
