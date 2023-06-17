@@ -32,6 +32,18 @@ body {
     padding-right: 2%;
 }
 
+p {
+    font-weight: 100;
+}
+
+footer{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    border-top: 2px solid #030000;
+    justify-content: space-between;
+}
+
 #top-bar {
     display: flex;
     justify-content: center;
@@ -120,7 +132,23 @@ body {
 
 .text-wrapper{
     text-align: justify;
+}
+
+#copyright-text {
     font-weight: 100;
+    
+}
+
+#copyright-img {
+    width: 15px;
+    height: 15px;
+}
+
+#info-text {
+    font-weight: 100;
+}
+.orange-text{
+    color: #f09a1a;
 }
 
 /* Tablet & Mobile CSS */
@@ -244,6 +272,17 @@ body {
 
     #images-container img {
         width: 40%;
+    }
+
+    #history {
+        margin-top: 200px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+    #info-text{
+        margin-top: 10px;
     }
 }
 
