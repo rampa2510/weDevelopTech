@@ -147,8 +147,10 @@ footer{
 #info-text {
     font-weight: 100;
 }
-.orange-text{
-    color: #f09a1a;
+
+.orange-text a {
+    text-decoration: none;
+    color: #f09a1a
 }
 
 /* Tablet & Mobile CSS */
