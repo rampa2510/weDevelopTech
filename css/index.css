@@ -222,7 +222,7 @@ footer{
 }
 
 /* Only mobile media query */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     body {
         margin: 10px;
@@ -296,5 +296,8 @@ footer{
     }
     #images-container img {
         width: 30%;
+    }
+    #history {
+        margin-top: -200px;
     }
 }
