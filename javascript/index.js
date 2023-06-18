@@ -14,3 +14,9 @@ for (let i = 0; i < lis.length; i++) {
     document.getElementsByClassName("nav-list-mob")[0].style.display = "none";
   });
 }
+
+function handleResize() {
+  document.getElementsByClassName("nav-list-mob")[0].style.display = "none";
+}
+
+window.addEventListener("resize", handleResize);
